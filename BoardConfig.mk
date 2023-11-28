@@ -5,7 +5,6 @@
 #
 
 DEVICE_PATH := device/xiaomi/fleur
-KERNEL_PATH := device/xiaomi/fleur-kernel
 
 # Architecture
 TARGET_ARCH := arm64
@@ -70,9 +69,9 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 
 # Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true
-TARGET_PREBUILT_KERNEL := $(KERNEL_PATH)/Image.gz
-BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/dtbo.img
-TARGET_PREBUILT_DTB := $(KERNEL_PATH)/dtb.img
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilts/Image.gz
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilts/dtb.img
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
 
 # HWUI
 HWUI_COMPILE_FOR_PERF := true

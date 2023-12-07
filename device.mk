@@ -5,7 +5,7 @@
 #
 
 DEVICE_PATH := device/xiaomi/fleur
-KERNEL_PATH := device/xiaomi/fleur-kernel
+
 # Inherit virtual_ab_ota product
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
@@ -138,7 +138,7 @@ PRODUCT_PACKAGES += \
 
 # Kernel
 PRODUCT_COPY_FILES += \
-    $(KERNEL_PATH)/dtb.img:dtb.img
+    $(LOCAL_PATH)/prebuilts/dtb.img:dtb.img
 
 # Lights
 PRODUCT_PACKAGES += \
